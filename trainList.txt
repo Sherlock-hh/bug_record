@@ -1,0 +1,19 @@
+diff128=128/255.
+diffr = -175.488 / 255
+diffg = 132.352 / 255
+diffb = -211.396 / 255
+#用来转色彩空间的系数
+rgb_nv12Yt=tf.constant([[0.299],[0.587],[0.114]],dtype=tf.float32)
+rgb_nv12Ut=tf.constant([[-0.172],[-0.339],[0.511]],dtype=tf.float32)
+rgb_nv12Vt=tf.constant([[0.511],[-0.428],[-0.083]],dtype=tf.float32)
+rgb_nv12f=tf.constant([[0.299,0.587,0.114],
+                     [-0.172,-0.339,0.511],
+                     [0.511,-0.428,-0.083]],dtype=float)
+rgb_nv12b=np.array([[0,diff128,diff128]],dtype=float)
+
+nv12_rgbf=tf.constant([[1,0,1.371],
+                     [1,-0.336,-0.698],
+                     [1,1.732,0]],dtype=tf.float32)
+nv12_rgbf=tf.transpose(nv12_rgbf)
+#nv12_rgbf=nv12_rgbf[tf.newaxis,tf.newaxis,:,:]
+nv12_rgbb=tf.constant([diffr,diffg,diffb],dtype=float)
