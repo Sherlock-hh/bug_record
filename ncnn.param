@@ -1,0 +1,185 @@
+7767517
+183 192
+Input            input_1                  0 1 input_1
+Permute          conv2d/BiasAdd__6        1 1 input_1 conv2d/BiasAdd__6:0 0=4
+Convolution      conv2d/BiasAdd           1 1 conv2d/BiasAdd__6:0 conv2d/BiasAdd:0 0=32 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=864
+ReLU             conv2d/Relu              1 1 conv2d/BiasAdd:0 conv2d/Relu:0
+Split            splitncnn_0              1 2 conv2d/Relu:0 conv2d/Relu:0_splitncnn_0 conv2d/Relu:0_splitncnn_1
+Convolution      conv2d_5/BiasAdd         1 1 conv2d/Relu:0_splitncnn_1 conv2d_5/BiasAdd:0 0=32 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=9216
+ReLU             conv2d_5/Relu            1 1 conv2d_5/BiasAdd:0 conv2d_5/Relu:0
+Split            splitncnn_1              1 2 conv2d_5/Relu:0 conv2d_5/Relu:0_splitncnn_0 conv2d_5/Relu:0_splitncnn_1
+Convolution      conv2d_6/BiasAdd         1 1 conv2d_5/Relu:0_splitncnn_1 conv2d_6/BiasAdd:0 0=8 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=2304
+ReLU             conv2d_6/Relu            1 1 conv2d_6/BiasAdd:0 conv2d_6/Relu:0
+Convolution      conv2d_7/BiasAdd         1 1 conv2d_6/Relu:0 conv2d_7/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=1600
+ReLU             conv2d_7/Relu            1 1 conv2d_7/BiasAdd:0 conv2d_7/Relu:0
+Convolution      conv2d_8/BiasAdd         1 1 conv2d_7/Relu:0 conv2d_8/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=3200
+ReLU             conv2d_8/Relu            1 1 conv2d_8/BiasAdd:0 conv2d_8/Relu:0
+Convolution      conv2d_9/BiasAdd         1 1 conv2d_8/Relu:0 conv2d_9/BiasAdd:0 0=32 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=12800
+ReLU             conv2d_9/Relu            1 1 conv2d_9/BiasAdd:0 conv2d_9/Relu:0
+Deconvolution    conv2d_transpose_3/BiasAdd 1 1 conv2d_9/Relu:0 conv2d_transpose_3/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=12800
+ReLU             conv2d_transpose_3/Relu  1 1 conv2d_transpose_3/BiasAdd:0 conv2d_transpose_3/Relu:0
+Deconvolution    conv2d_transpose_4/BiasAdd 1 1 conv2d_transpose_3/Relu:0 conv2d_transpose_4/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3200
+ReLU             conv2d_transpose_4/Relu  1 1 conv2d_transpose_4/BiasAdd:0 conv2d_transpose_4/Relu:0
+Deconvolution    conv2d_transpose_5/BiasAdd 1 1 conv2d_transpose_4/Relu:0 conv2d_transpose_5/BiasAdd:0 0=3 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=600
+ReLU             conv2d_transpose_5/Relu  1 1 conv2d_transpose_5/BiasAdd:0 conv2d_transpose_5/Relu:0
+Convolution      conv2d_10/BiasAdd        1 1 conv2d_5/Relu:0_splitncnn_0 conv2d_10/BiasAdd:0 0=32 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=9216
+ReLU             conv2d_10/Relu           1 1 conv2d_10/BiasAdd:0 conv2d_10/Relu:0
+Split            splitncnn_2              1 2 conv2d_10/Relu:0 conv2d_10/Relu:0_splitncnn_0 conv2d_10/Relu:0_splitncnn_1
+Convolution      conv2d_15/BiasAdd        1 1 conv2d_10/Relu:0_splitncnn_1 conv2d_15/BiasAdd:0 0=32 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=9216
+ReLU             conv2d_15/Relu           1 1 conv2d_15/BiasAdd:0 conv2d_15/Relu:0
+Split            splitncnn_3              1 2 conv2d_15/Relu:0 conv2d_15/Relu:0_splitncnn_0 conv2d_15/Relu:0_splitncnn_1
+Convolution      conv2d_20/BiasAdd        1 1 conv2d_15/Relu:0_splitncnn_1 conv2d_20/BiasAdd:0 0=32 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=9216
+ReLU             conv2d_20/Relu           1 1 conv2d_20/BiasAdd:0 conv2d_20/Relu:0
+Split            splitncnn_4              1 2 conv2d_20/Relu:0 conv2d_20/Relu:0_splitncnn_0 conv2d_20/Relu:0_splitncnn_1
+Convolution      conv2d_25/BiasAdd        1 1 conv2d_20/Relu:0_splitncnn_1 conv2d_25/BiasAdd:0 0=32 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=9216
+ReLU             conv2d_25/Relu           1 1 conv2d_25/BiasAdd:0 conv2d_25/Relu:0
+Split            splitncnn_5              1 2 conv2d_25/Relu:0 conv2d_25/Relu:0_splitncnn_0 conv2d_25/Relu:0_splitncnn_1
+Convolution      conv2d_30/BiasAdd        1 1 conv2d_25/Relu:0_splitncnn_1 conv2d_30/BiasAdd:0 0=32 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=9216
+ReLU             conv2d_30/Relu           1 1 conv2d_30/BiasAdd:0 conv2d_30/Relu:0
+Split            splitncnn_6              1 2 conv2d_30/Relu:0 conv2d_30/Relu:0_splitncnn_0 conv2d_30/Relu:0_splitncnn_1
+Convolution      conv2d_35/BiasAdd        1 1 conv2d_30/Relu:0_splitncnn_1 conv2d_35/BiasAdd:0 0=32 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=9216
+ReLU             conv2d_35/Relu           1 1 conv2d_35/BiasAdd:0 conv2d_35/Relu:0
+Split            splitncnn_7              1 2 conv2d_35/Relu:0 conv2d_35/Relu:0_splitncnn_0 conv2d_35/Relu:0_splitncnn_1
+Convolution      conv2d_40/BiasAdd        1 1 conv2d_35/Relu:0_splitncnn_1 conv2d_40/BiasAdd:0 0=32 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=9216
+ReLU             conv2d_40/Relu           1 1 conv2d_40/BiasAdd:0 conv2d_40/Relu:0
+Split            splitncnn_8              1 2 conv2d_40/Relu:0 conv2d_40/Relu:0_splitncnn_0 conv2d_40/Relu:0_splitncnn_1
+Convolution      conv2d_45/BiasAdd        1 1 conv2d_40/Relu:0_splitncnn_1 conv2d_45/BiasAdd:0 0=32 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=9216
+ReLU             conv2d_45/Relu           1 1 conv2d_45/BiasAdd:0 conv2d_45/Relu:0
+Convolution      conv2d_46/BiasAdd        1 1 conv2d_45/Relu:0 conv2d_46/BiasAdd:0 0=8 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=2304
+ReLU             conv2d_46/Relu           1 1 conv2d_46/BiasAdd:0 conv2d_46/Relu:0
+Convolution      conv2d_47/BiasAdd        1 1 conv2d_46/Relu:0 conv2d_47/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=1600
+ReLU             conv2d_47/Relu           1 1 conv2d_47/BiasAdd:0 conv2d_47/Relu:0
+Convolution      conv2d_48/BiasAdd        1 1 conv2d_47/Relu:0 conv2d_48/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=3200
+ReLU             conv2d_48/Relu           1 1 conv2d_48/BiasAdd:0 conv2d_48/Relu:0
+Convolution      conv2d_49/BiasAdd        1 1 conv2d_48/Relu:0 conv2d_49/BiasAdd:0 0=32 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=12800
+ReLU             conv2d_49/Relu           1 1 conv2d_49/BiasAdd:0 conv2d_49/Relu:0
+Deconvolution    conv2d_transpose_27/BiasAdd 1 1 conv2d_49/Relu:0 conv2d_transpose_27/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=12800
+ReLU             conv2d_transpose_27/Relu 1 1 conv2d_transpose_27/BiasAdd:0 conv2d_transpose_27/Relu:0
+Deconvolution    conv2d_transpose_28/BiasAdd 1 1 conv2d_transpose_27/Relu:0 conv2d_transpose_28/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3200
+ReLU             conv2d_transpose_28/Relu 1 1 conv2d_transpose_28/BiasAdd:0 conv2d_transpose_28/Relu:0
+Deconvolution    conv2d_transpose_29/BiasAdd 1 1 conv2d_transpose_28/Relu:0 conv2d_transpose_29/BiasAdd:0 0=3 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=600
+ReLU             conv2d_transpose_29/Relu 1 1 conv2d_transpose_29/BiasAdd:0 conv2d_transpose_29/Relu:0
+Convolution      conv2d_41/BiasAdd        1 1 conv2d_40/Relu:0_splitncnn_0 conv2d_41/BiasAdd:0 0=8 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=2304
+ReLU             conv2d_41/Relu           1 1 conv2d_41/BiasAdd:0 conv2d_41/Relu:0
+Convolution      conv2d_42/BiasAdd        1 1 conv2d_41/Relu:0 conv2d_42/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=1600
+ReLU             conv2d_42/Relu           1 1 conv2d_42/BiasAdd:0 conv2d_42/Relu:0
+Convolution      conv2d_43/BiasAdd        1 1 conv2d_42/Relu:0 conv2d_43/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=3200
+ReLU             conv2d_43/Relu           1 1 conv2d_43/BiasAdd:0 conv2d_43/Relu:0
+Convolution      conv2d_44/BiasAdd        1 1 conv2d_43/Relu:0 conv2d_44/BiasAdd:0 0=32 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=12800
+ReLU             conv2d_44/Relu           1 1 conv2d_44/BiasAdd:0 conv2d_44/Relu:0
+Deconvolution    conv2d_transpose_24/BiasAdd 1 1 conv2d_44/Relu:0 conv2d_transpose_24/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=12800
+ReLU             conv2d_transpose_24/Relu 1 1 conv2d_transpose_24/BiasAdd:0 conv2d_transpose_24/Relu:0
+Deconvolution    conv2d_transpose_25/BiasAdd 1 1 conv2d_transpose_24/Relu:0 conv2d_transpose_25/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3200
+ReLU             conv2d_transpose_25/Relu 1 1 conv2d_transpose_25/BiasAdd:0 conv2d_transpose_25/Relu:0
+Deconvolution    conv2d_transpose_26/BiasAdd 1 1 conv2d_transpose_25/Relu:0 conv2d_transpose_26/BiasAdd:0 0=3 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=600
+ReLU             conv2d_transpose_26/Relu 1 1 conv2d_transpose_26/BiasAdd:0 conv2d_transpose_26/Relu:0
+Convolution      conv2d_36/BiasAdd        1 1 conv2d_35/Relu:0_splitncnn_0 conv2d_36/BiasAdd:0 0=8 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=2304
+ReLU             conv2d_36/Relu           1 1 conv2d_36/BiasAdd:0 conv2d_36/Relu:0
+Convolution      conv2d_37/BiasAdd        1 1 conv2d_36/Relu:0 conv2d_37/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=1600
+ReLU             conv2d_37/Relu           1 1 conv2d_37/BiasAdd:0 conv2d_37/Relu:0
+Convolution      conv2d_38/BiasAdd        1 1 conv2d_37/Relu:0 conv2d_38/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=3200
+ReLU             conv2d_38/Relu           1 1 conv2d_38/BiasAdd:0 conv2d_38/Relu:0
+Convolution      conv2d_39/BiasAdd        1 1 conv2d_38/Relu:0 conv2d_39/BiasAdd:0 0=32 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=12800
+ReLU             conv2d_39/Relu           1 1 conv2d_39/BiasAdd:0 conv2d_39/Relu:0
+Deconvolution    conv2d_transpose_21/BiasAdd 1 1 conv2d_39/Relu:0 conv2d_transpose_21/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=12800
+ReLU             conv2d_transpose_21/Relu 1 1 conv2d_transpose_21/BiasAdd:0 conv2d_transpose_21/Relu:0
+Deconvolution    conv2d_transpose_22/BiasAdd 1 1 conv2d_transpose_21/Relu:0 conv2d_transpose_22/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3200
+ReLU             conv2d_transpose_22/Relu 1 1 conv2d_transpose_22/BiasAdd:0 conv2d_transpose_22/Relu:0
+Deconvolution    conv2d_transpose_23/BiasAdd 1 1 conv2d_transpose_22/Relu:0 conv2d_transpose_23/BiasAdd:0 0=3 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=600
+ReLU             conv2d_transpose_23/Relu 1 1 conv2d_transpose_23/BiasAdd:0 conv2d_transpose_23/Relu:0
+Convolution      conv2d_31/BiasAdd        1 1 conv2d_30/Relu:0_splitncnn_0 conv2d_31/BiasAdd:0 0=8 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=2304
+ReLU             conv2d_31/Relu           1 1 conv2d_31/BiasAdd:0 conv2d_31/Relu:0
+Convolution      conv2d_32/BiasAdd        1 1 conv2d_31/Relu:0 conv2d_32/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=1600
+ReLU             conv2d_32/Relu           1 1 conv2d_32/BiasAdd:0 conv2d_32/Relu:0
+Convolution      conv2d_33/BiasAdd        1 1 conv2d_32/Relu:0 conv2d_33/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=3200
+ReLU             conv2d_33/Relu           1 1 conv2d_33/BiasAdd:0 conv2d_33/Relu:0
+Convolution      conv2d_34/BiasAdd        1 1 conv2d_33/Relu:0 conv2d_34/BiasAdd:0 0=32 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=12800
+ReLU             conv2d_34/Relu           1 1 conv2d_34/BiasAdd:0 conv2d_34/Relu:0
+Deconvolution    conv2d_transpose_18/BiasAdd 1 1 conv2d_34/Relu:0 conv2d_transpose_18/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=12800
+ReLU             conv2d_transpose_18/Relu 1 1 conv2d_transpose_18/BiasAdd:0 conv2d_transpose_18/Relu:0
+Deconvolution    conv2d_transpose_19/BiasAdd 1 1 conv2d_transpose_18/Relu:0 conv2d_transpose_19/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3200
+ReLU             conv2d_transpose_19/Relu 1 1 conv2d_transpose_19/BiasAdd:0 conv2d_transpose_19/Relu:0
+Deconvolution    conv2d_transpose_20/BiasAdd 1 1 conv2d_transpose_19/Relu:0 conv2d_transpose_20/BiasAdd:0 0=3 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=600
+ReLU             conv2d_transpose_20/Relu 1 1 conv2d_transpose_20/BiasAdd:0 conv2d_transpose_20/Relu:0
+Convolution      conv2d_26/BiasAdd        1 1 conv2d_25/Relu:0_splitncnn_0 conv2d_26/BiasAdd:0 0=8 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=2304
+ReLU             conv2d_26/Relu           1 1 conv2d_26/BiasAdd:0 conv2d_26/Relu:0
+Convolution      conv2d_27/BiasAdd        1 1 conv2d_26/Relu:0 conv2d_27/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=1600
+ReLU             conv2d_27/Relu           1 1 conv2d_27/BiasAdd:0 conv2d_27/Relu:0
+Convolution      conv2d_28/BiasAdd        1 1 conv2d_27/Relu:0 conv2d_28/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=3200
+ReLU             conv2d_28/Relu           1 1 conv2d_28/BiasAdd:0 conv2d_28/Relu:0
+Convolution      conv2d_29/BiasAdd        1 1 conv2d_28/Relu:0 conv2d_29/BiasAdd:0 0=32 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=12800
+ReLU             conv2d_29/Relu           1 1 conv2d_29/BiasAdd:0 conv2d_29/Relu:0
+Deconvolution    conv2d_transpose_15/BiasAdd 1 1 conv2d_29/Relu:0 conv2d_transpose_15/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=12800
+ReLU             conv2d_transpose_15/Relu 1 1 conv2d_transpose_15/BiasAdd:0 conv2d_transpose_15/Relu:0
+Deconvolution    conv2d_transpose_16/BiasAdd 1 1 conv2d_transpose_15/Relu:0 conv2d_transpose_16/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3200
+ReLU             conv2d_transpose_16/Relu 1 1 conv2d_transpose_16/BiasAdd:0 conv2d_transpose_16/Relu:0
+Deconvolution    conv2d_transpose_17/BiasAdd 1 1 conv2d_transpose_16/Relu:0 conv2d_transpose_17/BiasAdd:0 0=3 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=600
+ReLU             conv2d_transpose_17/Relu 1 1 conv2d_transpose_17/BiasAdd:0 conv2d_transpose_17/Relu:0
+Convolution      conv2d_21/BiasAdd        1 1 conv2d_20/Relu:0_splitncnn_0 conv2d_21/BiasAdd:0 0=8 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=2304
+ReLU             conv2d_21/Relu           1 1 conv2d_21/BiasAdd:0 conv2d_21/Relu:0
+Convolution      conv2d_22/BiasAdd        1 1 conv2d_21/Relu:0 conv2d_22/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=1600
+ReLU             conv2d_22/Relu           1 1 conv2d_22/BiasAdd:0 conv2d_22/Relu:0
+Convolution      conv2d_23/BiasAdd        1 1 conv2d_22/Relu:0 conv2d_23/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=3200
+ReLU             conv2d_23/Relu           1 1 conv2d_23/BiasAdd:0 conv2d_23/Relu:0
+Convolution      conv2d_24/BiasAdd        1 1 conv2d_23/Relu:0 conv2d_24/BiasAdd:0 0=32 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=12800
+ReLU             conv2d_24/Relu           1 1 conv2d_24/BiasAdd:0 conv2d_24/Relu:0
+Deconvolution    conv2d_transpose_12/BiasAdd 1 1 conv2d_24/Relu:0 conv2d_transpose_12/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=12800
+ReLU             conv2d_transpose_12/Relu 1 1 conv2d_transpose_12/BiasAdd:0 conv2d_transpose_12/Relu:0
+Deconvolution    conv2d_transpose_13/BiasAdd 1 1 conv2d_transpose_12/Relu:0 conv2d_transpose_13/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3200
+ReLU             conv2d_transpose_13/Relu 1 1 conv2d_transpose_13/BiasAdd:0 conv2d_transpose_13/Relu:0
+Deconvolution    conv2d_transpose_14/BiasAdd 1 1 conv2d_transpose_13/Relu:0 conv2d_transpose_14/BiasAdd:0 0=3 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=600
+ReLU             conv2d_transpose_14/Relu 1 1 conv2d_transpose_14/BiasAdd:0 conv2d_transpose_14/Relu:0
+Convolution      conv2d_16/BiasAdd        1 1 conv2d_15/Relu:0_splitncnn_0 conv2d_16/BiasAdd:0 0=8 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=2304
+ReLU             conv2d_16/Relu           1 1 conv2d_16/BiasAdd:0 conv2d_16/Relu:0
+Convolution      conv2d_17/BiasAdd        1 1 conv2d_16/Relu:0 conv2d_17/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=1600
+ReLU             conv2d_17/Relu           1 1 conv2d_17/BiasAdd:0 conv2d_17/Relu:0
+Convolution      conv2d_18/BiasAdd        1 1 conv2d_17/Relu:0 conv2d_18/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=3200
+ReLU             conv2d_18/Relu           1 1 conv2d_18/BiasAdd:0 conv2d_18/Relu:0
+Convolution      conv2d_19/BiasAdd        1 1 conv2d_18/Relu:0 conv2d_19/BiasAdd:0 0=32 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=12800
+ReLU             conv2d_19/Relu           1 1 conv2d_19/BiasAdd:0 conv2d_19/Relu:0
+Deconvolution    conv2d_transpose_9/BiasAdd 1 1 conv2d_19/Relu:0 conv2d_transpose_9/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=12800
+ReLU             conv2d_transpose_9/Relu  1 1 conv2d_transpose_9/BiasAdd:0 conv2d_transpose_9/Relu:0
+Deconvolution    conv2d_transpose_10/BiasAdd 1 1 conv2d_transpose_9/Relu:0 conv2d_transpose_10/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3200
+ReLU             conv2d_transpose_10/Relu 1 1 conv2d_transpose_10/BiasAdd:0 conv2d_transpose_10/Relu:0
+Deconvolution    conv2d_transpose_11/BiasAdd 1 1 conv2d_transpose_10/Relu:0 conv2d_transpose_11/BiasAdd:0 0=3 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=600
+ReLU             conv2d_transpose_11/Relu 1 1 conv2d_transpose_11/BiasAdd:0 conv2d_transpose_11/Relu:0
+Convolution      conv2d_11/BiasAdd        1 1 conv2d_10/Relu:0_splitncnn_0 conv2d_11/BiasAdd:0 0=8 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=2304
+ReLU             conv2d_11/Relu           1 1 conv2d_11/BiasAdd:0 conv2d_11/Relu:0
+Convolution      conv2d_12/BiasAdd        1 1 conv2d_11/Relu:0 conv2d_12/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=1600
+ReLU             conv2d_12/Relu           1 1 conv2d_12/BiasAdd:0 conv2d_12/Relu:0
+Convolution      conv2d_13/BiasAdd        1 1 conv2d_12/Relu:0 conv2d_13/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=3200
+ReLU             conv2d_13/Relu           1 1 conv2d_13/BiasAdd:0 conv2d_13/Relu:0
+Convolution      conv2d_14/BiasAdd        1 1 conv2d_13/Relu:0 conv2d_14/BiasAdd:0 0=32 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=12800
+ReLU             conv2d_14/Relu           1 1 conv2d_14/BiasAdd:0 conv2d_14/Relu:0
+Deconvolution    conv2d_transpose_6/BiasAdd 1 1 conv2d_14/Relu:0 conv2d_transpose_6/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=12800
+ReLU             conv2d_transpose_6/Relu  1 1 conv2d_transpose_6/BiasAdd:0 conv2d_transpose_6/Relu:0
+Deconvolution    conv2d_transpose_7/BiasAdd 1 1 conv2d_transpose_6/Relu:0 conv2d_transpose_7/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3200
+ReLU             conv2d_transpose_7/Relu  1 1 conv2d_transpose_7/BiasAdd:0 conv2d_transpose_7/Relu:0
+Deconvolution    conv2d_transpose_8/BiasAdd 1 1 conv2d_transpose_7/Relu:0 conv2d_transpose_8/BiasAdd:0 0=3 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=600
+ReLU             conv2d_transpose_8/Relu  1 1 conv2d_transpose_8/BiasAdd:0 conv2d_transpose_8/Relu:0
+Convolution      conv2d_1/BiasAdd         1 1 conv2d/Relu:0_splitncnn_0 conv2d_1/BiasAdd:0 0=8 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=2304
+ReLU             conv2d_1/Relu            1 1 conv2d_1/BiasAdd:0 conv2d_1/Relu:0
+Convolution      conv2d_2/BiasAdd         1 1 conv2d_1/Relu:0 conv2d_2/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=1600
+ReLU             conv2d_2/Relu            1 1 conv2d_2/BiasAdd:0 conv2d_2/Relu:0
+Convolution      conv2d_3/BiasAdd         1 1 conv2d_2/Relu:0 conv2d_3/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=3200
+ReLU             conv2d_3/Relu            1 1 conv2d_3/BiasAdd:0 conv2d_3/Relu:0
+Convolution      conv2d_4/BiasAdd         1 1 conv2d_3/Relu:0 conv2d_4/BiasAdd:0 0=32 1=5 11=5 2=1 12=1 3=1 13=1 5=1 6=12800
+ReLU             conv2d_4/Relu            1 1 conv2d_4/BiasAdd:0 conv2d_4/Relu:0
+Deconvolution    conv2d_transpose/BiasAdd 1 1 conv2d_4/Relu:0 conv2d_transpose/BiasAdd:0 0=16 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=12800
+ReLU             conv2d_transpose/Relu    1 1 conv2d_transpose/BiasAdd:0 conv2d_transpose/Relu:0
+Deconvolution    conv2d_transpose_1/BiasAdd 1 1 conv2d_transpose/Relu:0 conv2d_transpose_1/BiasAdd:0 0=8 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3200
+ReLU             conv2d_transpose_1/Relu  1 1 conv2d_transpose_1/BiasAdd:0 conv2d_transpose_1/Relu:0
+Deconvolution    conv2d_transpose_2/BiasAdd 1 1 conv2d_transpose_1/Relu:0 conv2d_transpose_2/BiasAdd:0 0=3 1=5 11=5 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=600
+ReLU             conv2d_transpose_2/Relu  1 1 conv2d_transpose_2/BiasAdd:0 conv2d_transpose_2/Relu:0
+Concat           concatenate/concat       2 1 conv2d_transpose_2/Relu:0 conv2d_transpose_5/Relu:0 concatenate/concat:0 0=0
+Concat           concatenate_1/concat     2 1 concatenate/concat:0 conv2d_transpose_8/Relu:0 concatenate_1/concat:0 0=0
+Concat           concatenate_2/concat     2 1 concatenate_1/concat:0 conv2d_transpose_11/Relu:0 concatenate_2/concat:0 0=0
+Concat           concatenate_3/concat     2 1 concatenate_2/concat:0 conv2d_transpose_14/Relu:0 concatenate_3/concat:0 0=0
+Concat           concatenate_4/concat     2 1 concatenate_3/concat:0 conv2d_transpose_17/Relu:0 concatenate_4/concat:0 0=0
+Concat           concatenate_5/concat     2 1 concatenate_4/concat:0 conv2d_transpose_20/Relu:0 concatenate_5/concat:0 0=0
+Concat           concatenate_6/concat     2 1 concatenate_5/concat:0 conv2d_transpose_23/Relu:0 concatenate_6/concat:0 0=0
+Concat           concatenate_7/concat     2 1 concatenate_6/concat:0 conv2d_transpose_26/Relu:0 concatenate_7/concat:0 0=0
+Concat           concatenate_8/concat     2 1 concatenate_7/concat:0 conv2d_transpose_29/Relu:0 concatenate_8/concat:0 0=0
+Convolution      conv2d_50/BiasAdd        1 1 concatenate_8/concat:0 conv2d_50/BiasAdd:0 0=3 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=90
+ReLU             conv2d_50/Relu           1 1 conv2d_50/BiasAdd:0 conv2d_50/Relu_raw_output___4:0
+Permute          conv2d_50/BiasAdd__167   1 1 conv2d_50/Relu_raw_output___4:0 conv2d_50 0=3
